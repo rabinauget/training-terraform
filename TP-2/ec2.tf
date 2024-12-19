@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "myec2" {
-    ami = ami-005fc0f236362e99f
+    ami = "ami-005fc0f236362e99f"
     instance_type = "t2.micro"
     key_name = "terraform-training"
     tags = {

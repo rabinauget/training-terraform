@@ -10,5 +10,5 @@ AKIA3FLD57ASU5OLYM4X
 Secret key:
 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
 
-Gitlab-token:
+Github-token:
 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
