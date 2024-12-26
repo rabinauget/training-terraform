@@ -10,8 +10,8 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIA3FLD57ASU5OLYM4X"
-  secret_key = "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"
+  shared_credentials_files = "../.secrets/credentials"
+  profile = "default"
 }
 
 resource "aws_instance" "myec2" {
