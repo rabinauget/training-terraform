@@ -10,7 +10,7 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  shared_credentials_files = ["../.secrets/credentials"]
+  shared_credentials_files = [ "../.secrets/credentials" ]
   profile = "default"
 }
 
@@ -27,7 +27,7 @@ data "aws_ami" "app_ami" {
 resource "aws_instance" "myec2" {
     ami = "data.aws_ami.app_ami.id"
     instance_type = var.instance_type
-    key_name = "terraform-training"
+    key_name = "terraform-training-tp3"
     tags = var.aws_common_tag
     security_groups = [aws_security_group.allow_http_https_ssh.name]
 }
