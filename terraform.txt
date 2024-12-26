@@ -1,4 +1,0 @@
-console aws:
-https://auget-labs.signin.aws.amazon.com/console
-
-
