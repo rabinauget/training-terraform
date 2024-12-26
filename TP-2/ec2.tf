@@ -11,7 +11,7 @@ terraform {
 provider "aws" {
   region = "us-east-1"
   shared_credentials_files = ["../.secrets/credentials"]
-  profile = "default"
+  profile = "dev"
 }
 
 resource "aws_instance" "myec2" {
