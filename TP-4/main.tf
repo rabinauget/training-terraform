@@ -37,7 +37,7 @@ resource "aws_instance" "myec2" {
 
   provisioner "remote-exec" {
     inline = [ 
-      "sudo amazon-linux-extras install -y nginx",
+      "sudo amazon-linux-extras install -y nginx1.12",
       "sudo systemctl start nginx"
     ]
     connection {
