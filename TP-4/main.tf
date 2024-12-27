@@ -43,7 +43,7 @@ resource "aws_instance" "myec2" {
     connection {
       type = "ssh"
       user = "ec2-user"
-      private_key = file("../.secret/terraform-training.pem")
+      private_key = file("../.secrets/terraform-training.pem")
       host = self.public_ip
     }
   }
