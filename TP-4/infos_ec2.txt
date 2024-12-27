@@ -1,1 +1,0 @@
-PUBLIC IP: 44.222.58.120 ID: i-08a62efacd080e1d2 AZ: us-east-1c
