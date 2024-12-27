@@ -86,6 +86,6 @@ resource "aws_eip" "load_balancer" {
   instance = aws_instance.myec2.id
 
   provisioner "local-exec" {
-    command = "echo PUBLIC IP: ${self.public_ip} ID: ${aws_eip.load_balancer.id} AZ: ${aws_eip.load_balancer.availability_zone} > infos_tp4_ec2.txt"
+    command = "echo PUBLIC IP: ${aws_eip.load_balancer.public_ip}  ID: ${aws_instance.myec2.id}  AZ: ${aws_instance.myec2.availability_zone} > infos_ec2.txt"  
   }
 }
