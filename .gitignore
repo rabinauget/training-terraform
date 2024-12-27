@@ -1,6 +1,6 @@
-TP-2/.terraform/
-TP-3/.terraform/
-TP-4/.terraform/
-TP-5/.terraform/
+TP-*/.terraform/
 terraform.txt
 .secrets/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.backup
