@@ -31,10 +31,6 @@ resource "aws_instance" "myec2" {
   tags            = var.aws_common_tag
   security_groups = [aws_security_group.allow_http_https_ssh.name]
 
-  provisioner "local-exec" {
-    command = "echo PUBLIC IP: ${self.public_ip} ID: ${aws_instance.myec2.id} AZ: ${aws_instance.myec2.availability_zone} > infos_tp4_ec2.txt"
-  }
-
   provisioner "remote-exec" {
     inline = [ 
       "sudo amazon-linux-extras install -y nginx1.12",
@@ -88,4 +84,8 @@ resource "aws_security_group" "allow_http_https_ssh" {
 
 resource "aws_eip" "load_balancer" {
   instance = aws_instance.myec2.id
+
+  provisioner "local-exec" {
+    command = "echo PUBLIC IP: ${self.public_ip} ID: ${aws_eip.load_balancer.id} AZ: ${aws_eip.load_balancer.availability_zone} > infos_tp4_ec2.txt"
+  }
 }
