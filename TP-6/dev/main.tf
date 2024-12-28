@@ -28,6 +28,7 @@ module "ec2" {
   source = "../modules/ec2module"
   instance_type = "t2.nano"
   aws_common_tag = {
-  Name = "ec2-training-tp6"
-}
+  Name = "ec2-training-tp6-dev"
+  }
+  sg_name = "training-tp6-dev"
 }

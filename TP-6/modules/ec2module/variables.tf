@@ -11,3 +11,9 @@ variable "aws_common_tag" {
     Name = "ec2-training"
   }
 }
+
+variable "sg_name" {
+  type        = string
+  description = "set sg name"
+  default     = "training-tp6-sg"
+}

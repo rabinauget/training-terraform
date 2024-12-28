@@ -30,7 +30,7 @@ resource "aws_instance" "myec2" {
 }
 
 resource "aws_security_group" "allow_http_https_ssh" {
-  name        = "training-sg"
+  name        = var.sg_name
   description = "Allow http, https and ssh inbound traffic"
 
   ingress {
