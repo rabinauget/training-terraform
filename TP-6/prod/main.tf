@@ -17,7 +17,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "terraform-backend-auget"
-    key = "auget.tfstate"
+    key = "auget-prod-tp6.tfstate"
     region = "us-east-1"
     shared_credentials_files = ["../../.secrets/credentials"]
     profile = "default"
